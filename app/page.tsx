@@ -1,7 +1,10 @@
 import Image from "next/image";
+import HomeComponents from "@/src/components/home/index";
 
 export default function Home() {
   return (
-     <h1 className="text-primary bg-secondary border-[100]">home page</h1>
+<main>
+  <HomeComponents />
+</main>
   );
 }
