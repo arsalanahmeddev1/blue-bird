@@ -5,6 +5,7 @@
   --foreground: #171717;
   --color-primary: #12279A;
   --color-secondary: #EDBB2D;
+  --color-accent: #454545;
 }
 
 @theme {
@@ -14,6 +15,7 @@
   --font-mono: var(--font-geist-mono);
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,3 +33,22 @@ body {
 
 
 /*  */
+
+
+
+.footer-heading {
+  @apply text-[24px] font-bold;
+}
+
+.footer-info {
+  @apply text-[16px] font-bold hover:text-secondary transition-colors;
+} 
+
+.footer-column {
+  @apply 
+  flex flex-col gap-4 items-center md:items-start text-center md:text-left;
+} 
+
+.footer-list {
+  @apply flex flex-col gap-3 text-white font-medium;
+} 
