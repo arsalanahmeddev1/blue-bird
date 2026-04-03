@@ -21,7 +21,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="relative w-full z-50">
+    <header className="relative w-full z-50 ">
       {/* Top Bar */}
       <div className="bg-primary text-white py-2 hidden md:block">
         <div className="container mx-auto px-4 flex justify-end items-center gap-8 text-[12px] md:text-[15px] font-bold">
@@ -63,7 +63,7 @@ const Header = () => {
               <Link 
                 key={link.name} 
                 href={link.href}
-                className="text-accent hover:text-primary font-medium text-[18px] transition-colors"
+                className="text-accent hover:text-secondary font-medium text-[18px] transition-colors"
               >
                 {link.name}
               </Link>
