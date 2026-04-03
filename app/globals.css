@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
+  --background: #FAFAFA;
   --foreground: #171717;
   --color-primary: #12279A;
   --color-secondary: #EDBB2D;
   --color-accent: #454545;
+  --placeholder-color: #777777;
 }
 
 @theme {
@@ -16,6 +18,7 @@
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);
   --color-accent: var(--color-accent);
+  --color-placeholder: var(--placeholder-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,13 +45,38 @@ body {
 
 .footer-info {
   @apply text-[16px] font-bold hover:text-secondary transition-colors;
-} 
+}
 
 .footer-column {
-  @apply 
-  flex flex-col gap-4 items-center md:items-start text-center md:text-left;
-} 
+  @apply flex flex-col gap-4 items-center md:items-start text-center md:text-left;
+}
 
 .footer-list {
   @apply flex flex-col gap-3 text-white font-medium;
-} 
+}
+
+.primary-button {
+  @apply bg-secondary text-accent font-bold px-12 py-4 rounded-full hover:scale-105 transition-all shadow-xl text-[14px] md:text-[18px] text-center;
+}
+.secondary-button {
+  @apply bg-primary text-white font-bold px-12 py-4 rounded-full hover:scale-105 transition-all shadow-xl text-[14px] md:text-[18px] text-center;
+}
+
+.form-radio-label {
+  @apply flex cursor-pointer items-center gap-3 text-[16px] font-medium text-placeholder ;
+}
+
+.form-section-title {
+  @apply text-[20px] font-bold text-primary md:text-[24px];
+}
+.form-input {
+  @apply w-full rounded-xl bg-neutral-100 px-4 py-3.5 text-placeholder placeholder:text-placeholder/45 outline-none ring-primary/20 focus:ring-2;
+}
+
+.radio-button {
+  @apply h-2.5 w-2.5 rounded-full bg-primary opacity-0 peer-checked:opacity-100;
+}
+
+.shipping-radio-button {
+  @apply relative flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 border-primary;
+}
