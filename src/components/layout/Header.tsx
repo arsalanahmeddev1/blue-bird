@@ -45,23 +45,26 @@ const Header = () => {
         <div className="container mx-auto px-4 flex justify-between items-center h-[80px]">
           {/* Logo Container (Absolute positioned to overlap the top bar on desktop) */}
           <div className="relative z-10 md:-mt-10 px-8 py-4 transition-all duration-300">
-             <Link href="/">
-               <Image 
-                 src={logo} 
-                 alt="Bluebird Logistics" 
-                 width={200} 
-                 height={60} 
-                 className="w-auto h-[60px] md:h-[100px] object-contain"
-                 priority
-               />
-             </Link>
+            <Link href="/">
+
+              <div className="logo-wrapper bg-white rounded-[60px] py-[15px] px-[41px] mt-[29px] flex items-center justify-center"> 
+                <Image
+                  src={logo}
+                  alt="Bluebird Logistics"
+                  width={200}
+                  height={60}
+                  className="w-auto h-[60px] md:h-[100px] object-contain"
+                  priority
+                />
+              </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
+              <Link
+                key={link.name}
                 href={link.href}
                 className="text-accent hover:text-secondary font-medium text-[18px] transition-colors"
               >
@@ -72,15 +75,15 @@ const Header = () => {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-            <Link 
-              href="/get-quote" 
+            <Link
+              href="/get-quote"
               className="bg-secondary text-accent font-bold px-8 py-4 rounded-full hover:bg-opacity-90 transition-all shadow-md hidden md:block"
             >
               Get a Quote
             </Link>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="lg:hidden p-2 text-primary hover:bg-gray-100 rounded-lg transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
@@ -96,8 +99,8 @@ const Header = () => {
         <div className="lg:hidden absolute top-full left-0 w-full bg-white border-t p-4 shadow-xl z-50">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
+              <Link
+                key={link.name}
                 href={link.href}
                 className="flex items-center gap-4 text-accent font-medium py-3 px-2 border-b border-gray-100 hover:bg-gray-50 transition-all"
                 onClick={() => setIsMenuOpen(false)}
@@ -106,8 +109,8 @@ const Header = () => {
                 <span className="text-[16px]">{link.name}</span>
               </Link>
             ))}
-            <Link 
-              href="/get-quote" 
+            <Link
+              href="/get-quote"
               className="bg-secondary text-accent font-bold px-8 py-3 rounded-full text-center mt-4 shadow-md hover:bg-opacity-90 transition-all"
               onClick={() => setIsMenuOpen(false)}
             >

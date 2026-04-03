@@ -15,22 +15,24 @@ const items = [
 const Bannerbottom = () => {
   return (
     <section className="w-full  py-8 md:py-10 lg:py-12">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-8 px-4 sm:gap-x-8 md:flex-nowrap md:justify-between md:gap-x-4 lg:gap-x-8">
-        {items.map((src, index) => (
-          <div
-            key={index}
-            className="flex w-[45%] max-w-[220px] shrink-0 justify-center sm:max-w-[260px] md:w-auto md:min-w-0 md:flex-1 md:max-w-none"
-          >
-            <Image
-              src={src}
-              alt=""
-              width={280}
-              height={100}
-              className="h-auto w-full object-contain"
-       
-            />
-          </div>
-        ))}
+      <div className="container">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-8 px-4 sm:gap-x-8 md:flex-nowrap md:justify-between md:gap-x-4 lg:gap-x-8">
+          {items.map((src, index) => (
+            <div
+              key={index}
+              className="flex w-[45%] max-w-[220px] shrink-0 justify-center sm:max-w-[260px] md:w-auto md:min-w-0 md:flex-1 md:max-w-none"
+            >
+              <Image
+                src={src}
+                alt=""
+                width={280}
+                height={100}
+                className="h-auto w-full object-contain"
+
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

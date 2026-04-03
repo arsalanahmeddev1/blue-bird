@@ -11,19 +11,9 @@ const Bookingform = () => {
   >("same-day");
 
   return (
-    <section className="relative w-full overflow-hidden py-12 md:py-16 lg:py-24">
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={bookingformbgimage}
-          alt="Booking Form Background"
-          fill
-          className="object-cover object-center"
-          sizes="80vw"
-          priority
-        />
-      </div>
-
-      <div className="relative z-10 mx-auto w-full container px-4 sm:px-6 lg:px-8">
+    <section className="relative w-full overflow-hidden py-[210px]"
+    style={{backgroundImage: `url(${bookingformbgimage.src})`}}>
+      <div className="relative z-10 mx-auto w-full container">
         {/* Header */}
         <div className="mb-4 text-center">
           <p className="mb-3 text-[20px] font-semibold  tracking-wide text-secondary ">

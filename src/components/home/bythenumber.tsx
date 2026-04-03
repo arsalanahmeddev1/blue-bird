@@ -46,12 +46,12 @@ const Bythenumber = () => {
               {stats.map((item) => (
                 <div
                   key={item.value}
-                  className="flex flex-col items-center text-center md:px-2"
+                  className="flex flex-col mx-auto md:px-2"
                 >
                   <p className="text-[35px] font-extrabold tracking-tight text-accent  md:text-[50px]">
                     {item.value}
                   </p>
-                  <p className="mt-3 max-w-[14rem] text-[18px] leading-[1.2] text-placeholder ">
+                  <p className="max-w-[14rem] text-[18px] leading-[1.2] text-placeholder ">
                     {item.label}
                   </p>
                 </div>

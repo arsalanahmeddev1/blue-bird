@@ -3,11 +3,13 @@
 
 :root {
   --background: #FAFAFA;
-  --foreground: #171717;
+  --foreground: #454545;
   --color-primary: #12279A;
   --color-secondary: #EDBB2D;
   --color-accent: #454545;
   --placeholder-color: #777777;
+  --font-inter: var(--font-inter);
+  --font-onest: var(--font-onest);
 }
 
 @theme {
@@ -21,17 +23,17 @@
   --color-placeholder: var(--placeholder-color);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
 }
 
 
@@ -79,4 +81,16 @@ body {
 
 .shipping-radio-button {
   @apply relative flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 border-primary;
+}
+.container {
+  @apply mx-auto;
+}
+h2 span,
+h2, 
+h1 {
+  font-family: var(--font-onest);
+}
+
+.stay-updated-banner {
+  background: linear-gradient(90deg, #010433 0%, rgba(18, 39, 154, 0) 54.53%), url('@/public/images/stay-updated-bg.png') no-repeat center/cover;
 }
