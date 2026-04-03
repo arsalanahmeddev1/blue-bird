@@ -17,7 +17,7 @@ const stats = [
 
 const Bythenumber = () => {
   return (
-    <section className="w-full  py-14 md:py-20 lg:py-24">
+    <section className="bg-background w-full  py-14 md:py-20 lg:py-24">
       <div className="mx-auto container px-4 ">
         <div className="  md:text-left text-center">
           <h2 className="text-[30px] font-bold text-accent md:text-[48px] md:leading-[1.15] ">
@@ -41,7 +41,7 @@ const Bythenumber = () => {
             </p>
           </div>
 
-          <div className="relative  bg-background px-6  shadow-sm rounded-[50px]  py-2 ">
+          <div className="relative  bg-background px-6  shadow-sm rounded-[50px]  py-3  md:mt-0 mt-10">
             <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-3 md:gap-8 lg:gap-10">
               {stats.map((item) => (
                 <div
@@ -51,7 +51,7 @@ const Bythenumber = () => {
                   <p className="text-[35px] font-extrabold tracking-tight text-accent  md:text-[50px]">
                     {item.value}
                   </p>
-                  <p className="max-w-[14rem] text-[18px] leading-[1.2] text-placeholder ">
+                  <p className=" text-[18px] leading-[1.2] text-placeholder ">
                     {item.label}
                   </p>
                 </div>

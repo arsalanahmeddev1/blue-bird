@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import bookingformbgimage from "@/public/images/booking-form-bg.png";
-import herobirdbottomimage from "@/public/images/hero-bird.png";
+import herobirdbottomimage from "@/public/images/bird-image.png";
 
 const Bookingform = () => {
   const [shippingOption, setShippingOption] = useState<"ltl" | "ftl">("ltl");
@@ -19,15 +19,15 @@ const Bookingform = () => {
       {/* Bird badge: centered between hero and this section */}
       <div className="relative z-20 mx-auto flex w-full justify-center px-4 sm:px-6">
         <div
-          className="-mt-20 flex shrink-0  p-2.5   sm:p-3 md:-mt-30 md:p-3.5 "
+          className="bg-background rounded-full -mt-20 flex shrink-0  p-2.5   sm:p-3 md:-mt-30 md:p-3.5 "
           aria-hidden
         >
           <Image
             src={herobirdbottomimage}
             alt=""
-            width={100}
-            height={100}
-            className="h-30 w-30 object-contain "
+            width={80}
+            height={80}
+            className="h-25 w-25 object-contain "
           />
         </div>
       </div>
@@ -99,7 +99,7 @@ const Bookingform = () => {
             {/* Section 2 */}
             <div className="space-y-4">
               <h3 className="form-section-title">
-                Enter Pickup &amp; Delivery Locations
+                Enter Pickup and Delivery Locations
               </h3>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <input

@@ -6,7 +6,7 @@ const Whybluebird = () => {
   
 
       <div className=" mx-auto  px-4 text-center">
-        <p className="text-[20px] font-bold text-secondary ">
+        <p className="text-[20px] font-bold text-secondary" style={{ fontFamily: 'var(--font-onest)' }}>
           why bluebird logistics
         </p>
 

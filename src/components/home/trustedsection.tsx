@@ -7,7 +7,7 @@ const Trustedsection = () => {
   return (
     <section className="w-full py-10">
       <div className="mx-auto container px-4 text-center sm:px-6 lg:px-8">
-        <p className="text-[20px] font-bold lowercase tracking-wide text-secondary ma ">
+        <p className="text-[20px] font-bold lowercase tracking-wide text-secondary" style={{ fontFamily: 'var(--font-onest)' }}>
           trusted by industry leaders
         </p>
         <h2 className="mt-3 text-[30px] font-bold leading-tight text-foreground md:text-[40px] md:leading-[1.15] ">

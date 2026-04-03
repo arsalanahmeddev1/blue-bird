@@ -48,7 +48,7 @@ const Footer = () => {
 
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-[300px]">
+      <div className="relative z-10 container mx-auto px-4 md:pt-[300px] pb-15 pt-50">
         {/* Top Centered Logo Pill */}
         <div className="flex justify-center mb-10">
           <div className=" px-10 py-6  inline-flex items-center justify-center">

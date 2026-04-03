@@ -7,7 +7,7 @@ import herorightsidegif from '@/public/images/hero-right-side-gif.gif';
 
 const Herosection = () => {
     return (
-        <section className="relative z-0 w-full py-[50px] md:py-[100px] flex items-center pt-16 overflow-hidden">
+        <section className="relative w-full py-[50px] md:py-[100px] flex items-center pt-16 overflow-hidden">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
