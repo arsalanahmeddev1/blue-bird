@@ -4,6 +4,7 @@ import Link from "next/link";
 import shipmetsectionbgimage from "@/public/images/shipment-bg-image.png";
 import birdimage from "@/public/images/bird-image.png";
 import stayupdatedbannerimage from "@/public/images/stay-updated-bg.png";
+import bottombannerrightimage from "@/public/images/bottom-banner-rigt-image.png";
 
 const Shipmetsection = () => {
   return (
@@ -50,32 +51,63 @@ const Shipmetsection = () => {
           sizes="100vw"
         />
       </div> */}
-      <div className="shipment-section-banner bg-no-repeat bg-cover pt-[200px] pb-[330px] bg-bottom relative"
-      style={{backgroundImage: `url(${shipmetsectionbgimage.src})`}}>
-        <div className="container">
-            <div className="absolute bottom-[-250px] left-0 right-0 mx-auto w-full max-w-[85%]">
-              {/* White sits behind the gradient card (pseudo + z-[-1] painted above the same el’s bg) */}
-              <div
-                className="pointer-events-none absolute inset-0 z-0 rounded-[60px] bg-white"
-                style={{ transform: "translate(0, -18px) scale(1.02)" }}
-                aria-hidden
+   <div
+  className="shipment-section-banner bg-no-repeat bg-cover bg-bottom relative pt-[120px] pb-[180px] md:pt-[200px] md:pb-[330px]"
+  style={{ backgroundImage: `url(${shipmetsectionbgimage.src})` }}
+>
+  <div className="container px-4">
+    
+    <div className="absolute md:bottom-[-250px] bottom-[-140px] left-0 right-0 mx-auto w-full max-w-[95%] md:max-w-[85%]">
+      
+      {/* White background */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0 rounded-[30px] md:rounded-[60px] bg-white"
+        style={{ transform: "translate(0, -10px) scale(1.02)" }}
+      />
+
+      <div className="stay-updated-banner relative z-[1] rounded-[30px] md:rounded-[60px] py-[40px] px-[20px] md:py-[5
+      0px] md:px-[100px] overflow-hidden">
+        
+        <div className="max-w-[700px] mx-auto md:mx-0 text-center md:text-left">
+          
+          <h2 className="text-[22px] md:text-[40px] font-extrabold text-white leading-[1.2] mb-[25px] md:mb-[40px]">
+            Stay Updated with Our Latest Services and Offers
+          </h2>
+
+          <form>
+            <div className="subscribe-form-wrapper bg-white rounded-[40px] md:rounded-[60px] p-[10px] md:p-[10px] flex flex-col md:flex-row gap-3">
+              
+              <input
+                type="text"
+                className="w-full outline-none px-4 py-1 rounded-[30px]"
+                placeholder="Enter your email"
               />
-              <div className="stay-updated-banner relative z-[1] rounded-[60px] py-[70px] px-[100px]">
-              <div className="max-w-[700px]">
-               <h2 className="text-[20px] font-extrabold  text-white  md:text-[40px] leading-[1.15]  mx-auto md:mx-0 mb-[40px]">
-               Stay Updated with Our Latest Services and Offers
-               </h2>
-               <form action="">
-                  <div className="subscribe-form-wrapper bg-white rounded-[60px] relative p-[27px]">
-                  <input type="text" className="" placeholder="Enter your email" />
-                  <button type="submit" className="primary-button absolute right-0 top-0 bottom-0 m-[5px]">Subscribe</button>
-                  </div>
-               </form>
-              </div>
-              </div>
+
+              <button
+                type="submit"
+                className="primary-button px-6 py-3 md:ml-auto"
+              >
+                Subscribe
+              </button>
+
             </div>
+          </form>
         </div>
+
+        {/* ✅ Bird Image Fix */}
+        <div className="hidden md:block absolute bottom-0 right-0 w-[220px] lg:w-[300px]">
+          <Image
+            src={bottombannerrightimage}
+            alt="bottom banner right image"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+
       </div>
+    </div>
+
+  </div>
+</div>
     </section>
   );
 };

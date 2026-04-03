@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import bookingformbgimage from "@/public/images/booking-form-bg.png";
+import herobirdbottomimage from "@/public/images/hero-bird.png";
 
 const Bookingform = () => {
   const [shippingOption, setShippingOption] = useState<"ltl" | "ftl">("ltl");
@@ -11,11 +12,29 @@ const Bookingform = () => {
   >("same-day");
 
   return (
-    <section className="relative w-full overflow-hidden py-[210px]"
-    style={{backgroundImage: `url(${bookingformbgimage.src})`}}>
+    <section
+      className="relative z-10 w-full bg-cover bg-center bg-no-repeat pb-16 pt-8 md:pb-24 md:pt-10 lg:pb-28 lg:pt-12"
+      style={{ backgroundImage: `url(${bookingformbgimage.src})` }}
+    >
+      {/* Bird badge: centered between hero and this section */}
+      <div className="relative z-20 mx-auto flex w-full justify-center px-4 sm:px-6">
+        <div
+          className="-mt-20 flex shrink-0  p-2.5   sm:p-3 md:-mt-30 md:p-3.5 "
+          aria-hidden
+        >
+          <Image
+            src={herobirdbottomimage}
+            alt=""
+            width={100}
+            height={100}
+            className="h-30 w-30 object-contain "
+          />
+        </div>
+      </div>
+
       <div className="relative z-10 mx-auto w-full container">
         {/* Header */}
-        <div className="mb-4 text-center">
+        <div className="mb-4 mt-2 text-center md:mt-4">
           <p className="mb-3 text-[20px] font-semibold  tracking-wide text-secondary ">
             rates
           </p>

@@ -47,7 +47,7 @@ const Header = () => {
           <div className="relative z-10 md:-mt-10 px-8 py-4 transition-all duration-300">
             <Link href="/">
 
-              <div className="logo-wrapper bg-white rounded-[60px] py-[15px] px-[41px] mt-[29px] flex items-center justify-center"> 
+              <div className="logo-wrapper bg-white rounded-[60px] py-[15px] px-[20px] md:px-[41px] mt-[29px] flex items-center justify-center"> 
                 <Image
                   src={logo}
                   alt="Bluebird Logistics"
